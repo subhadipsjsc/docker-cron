@@ -1,0 +1,17 @@
+FROM python:3.8
+
+
+WORKDIR /app
+COPY ./project/ /app/project/
+COPY ./start.sh /app/start.sh
+
+RUN chmod +x /app/start.sh
+# RUN printenv | sed 's/^\(.*\)$/export \1/g' > /app/project_env.sh \
+#     && cat /app/project_env.sh /app/test.txt > /app/NEW.sh \
+#     && cat /app/NEW.sh
+
+
+# RUN printenv | sed 's/^\(.*\)$/export \1/g' > /app/project_env.sh \
+#     && cat /app/project_env.sh /app/test.txt > /app/final.sh
+
+CMD ["/app/start.sh"]

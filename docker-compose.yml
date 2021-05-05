@@ -1,0 +1,22 @@
+version: '2'
+
+
+
+services:
+  python_cron_2:
+    build: .
+    container_name: basic_cron
+    tty: true
+    env_file:
+      - ./.prodenv
+    # environment:
+    #   PY_VAR: "${PY_VAR}" 
+    #   PY_DB_USER: "${PY_DB_USER}" 
+    #   SYMFONY_ENV: "${SYMFONY_ENV}" 
+    #   SYMFONY__DATABASE__PASSWORD: "${SYMFONY__DATABASE__PASSWORD}" 
+    #   SYMFONY__APP__SECRET: "${SYMFONY__APP__SECRET}" 
+  
+
+
+# sudo docker exec -it 11bb3d7e5eff bash
+  
